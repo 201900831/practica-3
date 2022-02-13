@@ -1,34 +1,310 @@
-<!DOCTYPE html>
-<html>
+
+<!doctype html>
+<html lang="en">
 <head>
-    <title> Clientes Repsol</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Clientes Repsol</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
 </head>
-<body bgcolor="#BDDEF4">
-<h1><center >BIENVENIDO A REPSOL</center></h1>
-<h2>Aun no eres cliente de Repsol? </h2>
-<h3>Crea tu Cuenta: </h3>
-<form action="/signup" method="post">
-    <label for="fname">Nombre:</label>
-    <input type="text" id="fname" name="fname"><br><br>
-    <label for="lname">Apellidos:</label>
-    <input type="text" id="lname" name="lname"><br><br>
-    <label>Tipo de cliente:</label>
-    <select name="select">
-        <option value="value1">Cliente General</option>
-        <option value="value2" selected="">Cliente VIP</option>
-        <option value="value3">Cliente Premium</option>
-    </select><br><br>
-    <label for="identification">Identificacion (adjunte su DNI):</label>
-    <input type="text" id="identification" name="identification"/>
-    <br> <button type="submit">Submit</button>
-    <br> Acepto la politica de proteccion de datos: <input type="checkbox"/> <br/><br/>
-    <hr/> <br> Si tiene algun comentario dejenoslo aqui:
-    <br><textarea name="mensaje"> </textarea> <br/><br/>
-    <input class="btn btn-primary" type="submit" value="Submit">
-</form>
+<body class="bg-light">
 
-<br> <a href="ventajas.html"> Descubre las ventajas de VIP y Premium aqui</a>
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://www.bankinter.com/file_source/blog/Contents/A-Imagenes/Empresas/logo-repsol.jpg" alt="" width="72" height="57">
+            <h2>Aun no eres cliente de Repsol?</h2>
+            <p class="lead">Crea tu cuenta con nosotros</p>
+        </div>
 
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Tus codigos</span>
+                    <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Promocion VIP</h6>
+                            <small class="text-muted">Cliente VIP</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Promocion Premium</h6>
+                            <small class="text-muted">Cliente Premium</small>
+                        </div>
+                        <span class="text-muted">$18</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Codigo Estandar</h6>
+                            <small class="text-muted">Cliente estandar</small>
+                        </div>
+                        <span class="text-muted">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">−$5</span>
+                    </li>
+                </ul>
+
+                <form class="card p-2">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Codigo de Promocion">
+                        <button type="submit" class="btn btn-secondary">Utilizar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Bienvenido</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <div>
+                                   Necesita introducir el nombre y apellidos del cliente.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                                Se requiere un apellido valido.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="username" class="form-label">Usuario</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text">@</span>
+                                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                                <div class="invalid-feedback">
+                                    Introduzca un usuario.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                            <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Introduzca un email valido.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Direccion</label>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                            <div class="invalid-feedback">
+                                Introduzca su direccion.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="address2" class="form-label">Direccion 2 <span class="text-muted">(Optional)</span></label>
+                            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                        </div>
+
+                        <div class="col-md-5">
+                            <label for="country" class="form-label">Pais</label>
+                            <select class="form-select" id="country" required>
+                                <option value="">Elige...</option>
+                                <option>Estados Unidos</option>
+                                <option>España</option>
+
+                            </select>
+                            <div class="invalid-feedback">
+                                Introduzca un pais valido.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">Provincia</label>
+                            <select class="form-select" id="state" required>
+                                <option value="">Choose...</option>
+                                <option>Madrid</option>
+                                <option>Barcelona</option>
+                                <option>Valencia</option>
+                                <option>Sevilla</option>
+                                <option>Malaga</option>
+                                <option>Murcia</option>
+                                <option>Cadiz</option>
+                                <option>Baleares</option>
+                                <option>Las Palmas</option>
+                                <option>Vizcaya</option>
+                                <option>A Coruña</option>
+                                <option>Asturias</option>
+                                <option>Zaragoza</option>
+                                <option>Pontevedra</option>
+                                <option>Granada</option>
+                                <option>Leon</option>
+                                <option>Burgos</option>
+                                <option>Salamanca</option>
+                                <option>Lugo</option>
+                                <option>Orense</option>
+                                <option>Palencia</option>
+
+
+                            </select>
+                            <div class="invalid-feedback">
+                                Pon una provincia valida.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="zip" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Introduzca el zip.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="same-address">
+                        <label class="form-check-label" for="same-address">Direccion de envio es la misma que direccion de cobro.</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="save-info">
+                        <label class="form-check-label" for="save-info">Guardar informacion para la proxima.</label>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Pago</h4>
+
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                            <label class="form-check-label" for="credit">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="debit">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                            <label class="form-check-label" for="paypal">PayPal</label>
+                        </div>
+                    </div>
+
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Nombre en la Tarjeta</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                            <small class="text-muted">Nombre completo como en la tarjeta. </small>
+                            <div class="invalid-feedback">
+                                Introduzca el nombre.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Numero de Tarjeta</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Numero de tarjeta es necesario.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Fecha</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Fecha de caducidad requerida.
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Codigo de seguridad necesario.
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" >Terminar</button>
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Bien Hecho!</h4>
+                        <p>Ya eres cliente de Repsol.</p>
+                        <hr>
+                        <p class="mb-0">Disfruta de las ventajas que le ofrecemos por hacerse cliente Vip o Premium.</p>
+                        <a class="btn btn-primary" href="ventajas.html" role="button">Aqui Puedes</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="form-validation.js"></script>
 </body>
 </html>
